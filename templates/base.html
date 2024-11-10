@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Nozonn" />
+
+   <title>EpicFree</title>
+
+   <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="shortcut icon" href="https://static-assets-prod.epicgames.com/epic-store/static/webpack/../favicon.ico" type="image/x-icon">
+   {% block head %}{% endblock %}
+</head>
+
+<body>
+   <header>
+      <h1>Free Games of the week on Epic Game</h1>
+   </header>
+
+   <main>
+      {% block content %} {% endblock %}
+   </main>
+
+   <footer>
+      <div class="domain">
+         <p id="siteName">EpicFree</p>
+         <div class="socials">
+             <a href="https://github.com/Nozonn"><i class="fa fa-github"></i></a>
+             <a href="https://store.epicgames.com/fr/"><img src="https://static-assets-prod.epicgames.com/epic-store/static/webpack/../favicon.ico" type="image/x-icon" width="25px" alt="" id="epicGamesLogo"></a>
+         </div>
+     </div>
+     <div class="copyright">
+         <p>Copyright &copy; 2024. Nozonn. All rights reserved.</p>
+     </div>
+
+   </footer>
+
+   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

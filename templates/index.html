@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<div id="now">
+    <h3>Today : {{today}} <br>Remaining Time : {{remainingTime}} days</h3>
+</div>
+
+{% for freeGame in freeGames %}
+<hr>
+<div class="game" id="{{freeGame['id']}}">
+    <h2>{{ freeGame["title"] }}</h2>
+    <a href="https://store.epicgames.com/fr/p/{{freeGame['url']}}"><img src="{{ freeGame['image'] }}"></a>
+    <hr>
+    <p>{{ freeGame["start_date"] }} <br>To {{ freeGame["end_date"] }}</p>
+    <hr>
+    <p>{{ freeGame["description"] }}</p>
+</div>
+{% endfor %}
+{% endblock %}
