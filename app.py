@@ -18,4 +18,4 @@ def index():
    return render_template("index.html", freeGames=free_games, today=today, remainingTime=remainingTime)
 
 if __name__ == "__main__":
-   app.run(debug=True)
+   app.run("192.168.1.159", 9000, debug=True)
