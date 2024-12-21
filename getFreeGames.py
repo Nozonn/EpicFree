@@ -21,7 +21,10 @@ def get_free_games():
                     start_date = datetime.fromisoformat(offer['startDate'][:-1])
                     end_date = datetime.fromisoformat(offer['endDate'][:-1])
                     if start_date <= datetime.now() <= end_date:
-                        url = game["catalogNs"]["mappings"][0]["pageSlug"]
+                        if game["catalogNs"]["mappings"] != None:
+                            url = game["catalogNs"]["mappings"][0]["pageSlug"]
+                        else:
+                            continue
                         if game["offerMappings"] != []:
                             url = game["offerMappings"][0]["pageSlug"]
 
