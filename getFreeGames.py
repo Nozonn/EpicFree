@@ -44,7 +44,3 @@ def display_free_games(games):
         print("Jeux gratuits disponibles cette semaine sur Epic Games:")
         for game in games:
             print(f"{game['title']} (Disponible du {game['start_date'].strftime('%Y-%m-%d')} au {game['end_date'].strftime('%Y-%m-%d')})")
-
-if __name__ == "__main__":
-    free_games = get_free_games()
-    display_free_games(free_games)
