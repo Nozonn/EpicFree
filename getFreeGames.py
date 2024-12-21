@@ -24,7 +24,7 @@ def get_free_games():
                         if game["catalogNs"]["mappings"] not in (None, []):
                             url = game["catalogNs"]["mappings"][0]["pageSlug"]
                         else:
-                            continue
+                            url = ""
                         if game["offerMappings"] != []:
                             url = game["offerMappings"][0]["pageSlug"]
 
